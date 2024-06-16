@@ -6,14 +6,13 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 @SuppressWarnings("unchecked")
 public class BasePattern extends Pattern {
 
-    public BasePattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public BasePattern(RemoteWebElement element) {
+        super(element);
     }
 
     public WebElement getLabeledBy() {

@@ -4,15 +4,14 @@ import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
 
 public class GridPattern extends Pattern {
 
-    public GridPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public GridPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsGridPatternAvailable") == null)
             throw new UnsupportedPatternException("Grid");

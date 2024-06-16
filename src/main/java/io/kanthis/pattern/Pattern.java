@@ -13,9 +13,9 @@ public abstract class Pattern implements WrapsElement, WrapsDriver {
     protected final RemoteWebDriver driver;
     protected final RemoteExecuteMethod executeMethod;
 
-    public Pattern(RemoteWebElement element, RemoteWebDriver driver) {
+    public Pattern(RemoteWebElement element) {
         this.element = element;
-        this.driver = driver;
+        this.driver = (RemoteWebDriver) element.getWrappedDriver();
         this.executeMethod = new RemoteExecuteMethod(driver);
     }
 

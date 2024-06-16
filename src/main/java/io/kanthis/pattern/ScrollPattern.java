@@ -3,7 +3,6 @@ package io.kanthis.pattern;
 import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
@@ -11,8 +10,8 @@ import io.kanthis.dto.ScrollAmount;
 
 public class ScrollPattern extends Pattern {
 
-    public ScrollPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public ScrollPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsScrollPatternAvailable") == null)
             throw new UnsupportedPatternException("Scroll");

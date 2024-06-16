@@ -3,7 +3,6 @@ package io.kanthis.pattern;
 import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
@@ -11,8 +10,8 @@ import io.kanthis.dto.ZoomUnit;
 
 public class TransformPattern2 extends Pattern {
 
-    public TransformPattern2(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public TransformPattern2(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsTransformPattern2Available") == null)
             throw new UnsupportedPatternException("Transform2");

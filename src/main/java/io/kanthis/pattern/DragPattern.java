@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
@@ -14,8 +13,8 @@ import io.kanthis.UnsupportedPatternException;
 @SuppressWarnings("unchecked")
 public class DragPattern extends Pattern {
 
-    public DragPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public DragPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsDragPatternAvailable") == null)
             throw new UnsupportedPatternException("Drag");

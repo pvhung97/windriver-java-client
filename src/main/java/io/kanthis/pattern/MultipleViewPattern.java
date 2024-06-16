@@ -5,7 +5,6 @@ import static io.kanthis.WinDriverCommand.*;
 import java.util.List;
 
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
@@ -13,8 +12,8 @@ import io.kanthis.UnsupportedPatternException;
 @SuppressWarnings("unchecked")
 public class MultipleViewPattern extends Pattern {
 
-    public MultipleViewPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public MultipleViewPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsMultipleViewPatternAvailable") == null)
             throw new UnsupportedPatternException("Multiple view");

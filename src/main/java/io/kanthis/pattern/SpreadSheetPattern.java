@@ -4,15 +4,14 @@ import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
 
 public class SpreadSheetPattern extends Pattern {
 
-    public SpreadSheetPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public SpreadSheetPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsSpreadSheetPatternAvailable") == null)
             throw new UnsupportedPatternException("Spread sheet");

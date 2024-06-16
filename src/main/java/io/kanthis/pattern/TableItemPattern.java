@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
@@ -14,8 +13,8 @@ import io.kanthis.UnsupportedPatternException;
 @SuppressWarnings("unchecked")
 public class TableItemPattern extends Pattern {
 
-    public TableItemPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public TableItemPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsTableItemPatternAvailable") == null)
             throw new UnsupportedPatternException("Table item");

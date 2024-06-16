@@ -3,15 +3,14 @@ package io.kanthis.pattern;
 import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
 
 public class TransformPattern extends Pattern {
 
-    public TransformPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public TransformPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsTransformPatternAvailable") == null)
             throw new UnsupportedPatternException("Transform");

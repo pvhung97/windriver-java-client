@@ -3,15 +3,14 @@ package io.kanthis.pattern;
 import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
 
 public class ScrollItemPattern extends Pattern {
 
-    public ScrollItemPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public ScrollItemPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsScrollItemPatternAvailable") == null)
             throw new UnsupportedPatternException("Scroll item");

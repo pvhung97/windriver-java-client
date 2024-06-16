@@ -2,6 +2,16 @@
 
 This is a Java language webdriver client that can be used with [WinDriver](https://github.com/pvhung97/WinDriver)
 
+# Maven dependency
+
+```
+<dependency>
+  <groupId>io.github.pvhung97</groupId>
+  <artifactId>windriver-client</artifactId>
+  <version>${version}</version>
+</dependency>
+```
+
 # Sample usage
 
 ```

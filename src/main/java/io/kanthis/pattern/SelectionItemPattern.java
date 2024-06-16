@@ -4,15 +4,14 @@ import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
 
 public class SelectionItemPattern extends Pattern {
 
-    public SelectionItemPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public SelectionItemPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsSelectionItemPatternAvailable") == null)
             throw new UnsupportedPatternException("Selection item");

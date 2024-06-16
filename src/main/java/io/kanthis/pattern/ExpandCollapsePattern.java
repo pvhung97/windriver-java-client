@@ -3,15 +3,14 @@ package io.kanthis.pattern;
 import static io.kanthis.WinDriverCommand.*;
 
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
 
 public class ExpandCollapsePattern extends Pattern {
 
-    public ExpandCollapsePattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public ExpandCollapsePattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsExpandCollapsePatternAvailable") == null)
             throw new UnsupportedPatternException("Expand collapse");

@@ -6,7 +6,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.remote.CommandPayload;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.kanthis.UnsupportedPatternException;
@@ -17,8 +16,8 @@ import static io.kanthis.WinDriverCommand.*;
 @SuppressWarnings("unchecked")
 public class WindowPattern extends Pattern {
 
-    public WindowPattern(RemoteWebElement element, RemoteWebDriver driver) {
-        super(element, driver);
+    public WindowPattern(RemoteWebElement element) {
+        super(element);
         
         if (element.getAttribute("IsWindowPatternAvailable") == null)
             throw new UnsupportedPatternException("Window");
