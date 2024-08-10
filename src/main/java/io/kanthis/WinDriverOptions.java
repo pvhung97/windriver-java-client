@@ -29,6 +29,7 @@ public class WinDriverOptions extends MutableCapabilities {
         setCapability("windriver:appPath", appPath);
         setCapability("windriver:aumid", (String) null);
         setCapability("windriver:nativeWindowHandle", (String) null);
+        setCapability("windriver:windowNameRegex", (String) null);
         return this;
     }
 
@@ -41,6 +42,7 @@ public class WinDriverOptions extends MutableCapabilities {
         setCapability("windriver:aumid", aumid);
         setCapability("windriver:appPath", (String) null);
         setCapability("windriver:nativeWindowHandle", (String) null);
+        setCapability("windriver:windowNameRegex", (String) null);
         return this;
     }
     
@@ -48,6 +50,15 @@ public class WinDriverOptions extends MutableCapabilities {
         setCapability("windriver:nativeWindowHandle", handle);
         setCapability("windriver:appPath", (String) null);
         setCapability("windriver:aumid", (String) null);
+        setCapability("windriver:windowNameRegex", (String) null);
+        return this;
+    }
+
+    public WinDriverOptions setWindowNameRegex(String regex) {
+        setCapability("windriver:windowNameRegex", regex);
+        setCapability("windriver:appPath", (String) null);
+        setCapability("windriver:aumid", (String) null);
+        setCapability("windriver:nativeWindowHandle", (String) null);
         return this;
     }
 
