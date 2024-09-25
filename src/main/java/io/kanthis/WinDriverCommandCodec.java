@@ -113,9 +113,11 @@ public class WinDriverCommandCodec extends W3CHttpCommandCodec {
         String transformPattern2 = sessionId + "/transformPattern2/:id";
         defineCommand(ZOOM, post(transformPattern2 + "/zoom"));
         defineCommand(ZOOM_BY_UNIT, post(transformPattern2 + "/zoomByUnit"));
-        defineCommand(MOVE, post(transformPattern2 + "/move"));
-        defineCommand(RESIZE, post(transformPattern2 + "/resize"));
-        defineCommand(ROTATE, post(transformPattern2 + "/rotate"));
+        
+        String transformPattern = sessionId + "/transformPattern/:id";
+        defineCommand(MOVE, post(transformPattern + "/move"));
+        defineCommand(RESIZE, post(transformPattern + "/resize"));
+        defineCommand(ROTATE, post(transformPattern + "/rotate"));
 
         String valuePattern = sessionId + "/valuePattern/:id";
         defineCommand(SET_VALUE, post(valuePattern + "/value"));

@@ -20,6 +20,10 @@ public class WinDriverOptions extends MutableCapabilities {
         setCapability("windriver:automationName", AutomationName.UIA3);
     }
 
+    /**
+     * 
+     * @param automationName Use value from {@link io.kanthis.dto.AutomationName AutomationName}
+     */
     public WinDriverOptions setAutomationName(String automationName) {
         setCapability("windriver:automationName", automationName);
         return this;
@@ -79,6 +83,15 @@ public class WinDriverOptions extends MutableCapabilities {
 
     public WinDriverOptions setCommandTimeout(Duration timeout) {
         setCapability("windriver:commandTimeout", timeout.toMillis());
+        return this;
+    }
+
+    /**
+     * 
+     * @param patterns Use value from {@link io.kanthis.dto.PageSourceAdditionalPattern PageSourceAdditionalPattern}
+     */
+    public WinDriverOptions setAdditionalPageSourcePattern(List<String> patterns) {
+        setCapability("windriver:additionalPageSourcePattern", patterns);
         return this;
     }
 }
